@@ -1,7 +1,9 @@
+#!usr/bin/env python3
+
 import random
 import os
 
-clear = lambda: os.system('cls')
+clear = lambda: os.system('clear')
 
 
 class Game:
