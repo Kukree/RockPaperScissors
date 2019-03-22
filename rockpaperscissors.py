@@ -19,7 +19,12 @@ class Game:
     'player_choice': 'Your choice: ',
     'rock': 'Rock',
     'paper': 'Paper',
-    'scissors': 'Scissors'}
+    'scissors': 'Scissors',
+    'help': '''
+    Welcome to Rock Paper Scissors game by Evgeniy Kuleshov (kukree) 
+    To start the game you must press the button 1 in the command line and press the ENTER key. 
+    Then select your item (rock, paper or scissors). 
+    After your turn, a message will be displayed about the choice of computer, your choice and the winner \n'''}
 
     def player_turn(self):
         clear()
@@ -81,8 +86,8 @@ if __name__ == "__main__":
                 print(player_choice_output + "\n")
                 print(winner)
         elif command == '2':  # Помощь
-            pass
-            # TODO: Сделать окно помощи с правилами игры.
+            clear()
+            print(game.messages['help'])
         else:  # Неизвестная команда
             clear()
             print(game.messages['unknowncommand'])
